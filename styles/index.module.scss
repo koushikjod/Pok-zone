@@ -1,0 +1,42 @@
+@media screen and (min-width: 1024px) {
+    .feature-image {
+        margin-top: 50px;
+        object {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
+        }
+    }
+
+    .feature {
+        z-index: 1;
+    }
+
+    .features .feature-wrapper:nth-child(odd) :global(.columns) {
+        .feature {
+            margin-left: -20rem;
+        }
+    }
+
+    .features .feature-wrapper:nth-child(even) :global(.columns) {
+        flex-direction: row-reverse;
+
+        .feature {
+            margin-right: -20rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .feature-wrapper {
+        padding-top: 1.5rem;
+        padding-bottom: 0;
+    }
+
+    .extra-features {
+        padding-top: 1.5rem;
+    }
+}
